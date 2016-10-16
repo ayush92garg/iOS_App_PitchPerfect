@@ -24,12 +24,13 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func startRecordingIsClicked(_ sender: AnyObject) {
         
-        //update the Recording Label
-        recordingLabel.text = "Recording! Tap again to stop"
         
         //toggle to start/stop recording buttons
         startRecording.isEnabled = false
         stopRecording.isEnabled = true
+        
+        //update the Recording Label
+        updateRecordingLabel()
         
         //getting the path of the file where audio will be saved
         let dirpath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -62,7 +63,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
         //toggle start/stop buttons and update the Label
         startRecording.isEnabled = true
         stopRecording.isEnabled = false
-        recordingLabel.text = "Tap the Mic to start Recording!!"
+        updateRecordingLabel()
         
         //stopping the audio recording and de-active the recording session
         audioRecorder.stop()
@@ -75,15 +76,16 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     
     }
     
+    func updateRecordingLabel(){
+        recordingLabel.text = (stopRecording.isEnabled) ? "Recording! Tap below to stop" : "Tap the Mic to start Recording!!"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Initialise the Recording Label
-        recordingLabel.text = "Tap the Mic to start Recording!!"
-        
         //Disable Stop Recording Button
         stopRecording.isEnabled = false
-        
+        updateRecordingLabel()
     }
 
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
