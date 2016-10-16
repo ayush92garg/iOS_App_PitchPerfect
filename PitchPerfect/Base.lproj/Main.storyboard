@@ -41,7 +41,7 @@
                         <constraints>
                             <constraint firstItem="m3m-DR-kZN" firstAttribute="centerX" secondItem="IXL-yL-SQv" secondAttribute="centerX" id="QjB-e2-d8f"/>
                             <constraint firstItem="IXL-yL-SQv" firstAttribute="top" secondItem="kZ6-0b-UZ1" secondAttribute="bottom" constant="20" id="R0d-bF-BQq"/>
-                            <constraint firstItem="m3m-DR-kZN" firstAttribute="top" secondItem="IXL-yL-SQv" secondAttribute="bottom" constant="37.5" id="RSm-ga-c7y"/>
+                            <constraint firstItem="m3m-DR-kZN" firstAttribute="top" secondItem="IXL-yL-SQv" secondAttribute="bottom" constant="8" id="RSm-ga-c7y"/>
                             <constraint firstItem="kZ6-0b-UZ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f1Y-hy-w4i"/>
                             <constraint firstItem="IXL-yL-SQv" firstAttribute="centerX" secondItem="kZ6-0b-UZ1" secondAttribute="centerX" id="jwt-tE-JKm"/>
                             <constraint firstItem="kZ6-0b-UZ1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sj4-qy-Hz9"/>
@@ -52,7 +52,7 @@
                         <outlet property="recordingLabel" destination="IXL-yL-SQv" id="j6Y-bX-HOS"/>
                         <outlet property="startRecording" destination="kZ6-0b-UZ1" id="Wp3-fB-5wL"/>
                         <outlet property="stopRecording" destination="m3m-DR-kZN" id="S3h-uF-oqi"/>
-                        <segue destination="9Su-nP-83H" kind="show" identifier="stopRecordingSegue" id="paq-SG-Uz8"/>
+                        <segue destination="9Su-nP-83H" kind="push" identifier="stopRecordingSegue" id="paq-SG-Uz8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,6 +142,7 @@
                             <constraint firstItem="18v-iO-Jcd" firstAttribute="leading" secondItem="v0F-6f-tRW" secondAttribute="leadingMargin" id="y7f-Dp-4EA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V4X-wJ-O6m"/>
                     <connections>
                         <outlet property="chipmunkButton" destination="gS1-ja-coN" id="78F-z4-Kz9"/>
                         <outlet property="echoButton" destination="Kyf-oL-zdl" id="5wM-gg-4e2"/>
