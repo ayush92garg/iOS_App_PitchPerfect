@@ -49,9 +49,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="for-Zd-z24"/>
                     <connections>
-                        <outlet property="RecordingLabel" destination="IXL-yL-SQv" id="B99-yi-FWx"/>
-                        <outlet property="StartRecording" destination="kZ6-0b-UZ1" id="jI5-aK-0dF"/>
-                        <outlet property="StopRecording" destination="m3m-DR-kZN" id="j7t-52-E0e"/>
+                        <outlet property="recordingLabel" destination="IXL-yL-SQv" id="j6Y-bX-HOS"/>
+                        <outlet property="startRecording" destination="kZ6-0b-UZ1" id="Wp3-fB-5wL"/>
+                        <outlet property="stopRecording" destination="m3m-DR-kZN" id="S3h-uF-oqi"/>
                         <segue destination="9Su-nP-83H" kind="show" identifier="stopRecordingSegue" id="paq-SG-Uz8"/>
                     </connections>
                 </viewController>
