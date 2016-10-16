@@ -11,7 +11,6 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
-    
     //defining outlets
     
     @IBOutlet weak var snailButton:UIButton!
@@ -33,9 +32,7 @@ class PlaySoundsViewController: UIViewController {
         case Slow = 0, Fast, Chipmunk, Vader, Echo, Reverb
     }
     
-    
     @IBAction func playSoundForButton(sender: UIButton){
-        print("play")
         switch buttonType(rawValue: sender.tag)! {
         case .Slow:
             playSound(rate: 0.5)
@@ -55,7 +52,6 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func stopButtonPressed(sender: AnyObject){
-        print("stop")
         stopAudio()
     }
 
@@ -65,21 +61,5 @@ class PlaySoundsViewController: UIViewController {
         configureUI(playState: .NotPlaying)
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
